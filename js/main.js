@@ -1,61 +1,68 @@
-function solicitarnombre(){
-  let nombre = prompt("ingrese su nombre")
-  alert("El nombre ingresado es "+ nombre)
-}
+
+const formulario = document.getElementById("formulario");
+
+ formulario.addEventListener("submit", (Event) => {
+Event.preventDefault();
+const inputnombre = document.getElementById("nombre")
+const inputapellido = document.getElementById("Apellido")
+const inputprecio = document.getElementById("precio")
+const inputdestino = document.getElementById("destino")
+
+localStorage.setItem("descuento",650)
+localStorage.setItem("iva",21)
+localStorage.setItem("iva2",100)
+
+let descuento=localStorage.getItem("descuento")
+let iva=localStorage.getItem("iva")
+let iva2=localStorage.getItem("iva2")
+let nombrett= inputnombre.value
+let apellidott=inputapellido.value
+let enviocost= parseInt (inputdestino.value);
+const monto =parseInt (inputprecio.value);
+let destinott = inputdestino.value
+
 function multiplicar (parametro1,parametro2,parametro3,parametro4){
   let resultadoM=parametro1*parametro2/parametro3 + parametro4
-  alert( "pagaria con impuestos iva $"+resultadoM)
-   
+  document.getElementById("impuestosp").innerHTML="su monto con impuestos seria $"+resultadoM
+let finish=resultadoM + enviocost;
+console.log(finish)
+document.getElementById("totalp").innerHTML="Su precio total seria $"+finish
 }
 
-solicitarnombre();
-const descuento = "650";
-let salir = "";
-let iva=21;
-let iva2=100;
-let costoenvio=3500
 
-const paises=[
-  {
-    pais:"argentina",
-    envio:850,
-  },
-
-  {
-    pais:"chile",
-    envio:1200,
-  },
-
-  {
-    pais:"uruguay",
-    envio:1500,
-  },
-  {
-    pais:"paraguay",
-    envio:2000,
-  },
-]
-
-do {
-  const monto = parseInt( prompt("Monto de su compra$$"));
   if (monto>"5000") {
-let resta=monto-descuento
-alert("con el descuento paga $"+resta);
+let resta=monto-descuento;
+
+document.getElementById("montop").innerHTML="su monto seria $"+resta;
 multiplicar(iva,resta,iva2,resta);
+
   
   }else {
-    multiplicar(iva,monto,iva2,monto) 
+    document.getElementById("montop").innerHTML="su monto seria $"+monto;
+    multiplicar(iva,monto,iva2,monto) ;
   }
  
-  let envioalpais= prompt("para que pais es el envio ?solo para uruguay,paraguay,chile y argentina")
+  document.getElementById("nombreP").innerHTML="Bienvenido "+ nombrett + apellidott
+document.getElementById("enviop").innerHTML="su costo de envio seria $"+enviocost
 
-  const encontrar = paises.find( (paises)=>paises.pais === envioalpais );
-  console.log(encontrar);
- 
 
-  alert("Usted pagaria un envio de $"+encontrar.envio
+
+
+
+
+
+ });
+
+
+
+
+
+
   
-  )
 
-  salir = prompt("desea usted salir");
-} while (salir != "si");
+   
+
+
+
+      
+
