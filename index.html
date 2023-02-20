@@ -3,43 +3,76 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
 
-
-    <link rel="stylesheet" href="./css/main.css">
+    <title>preentrega</title>
 </head>
 
 <body>
-    <h1>
-        Venta de remeras por mayor
-    </h1>
 
-    <form action="" id="formulario">
-        <label for="name">Nombre</label>
-        <input type="text" name="" id="nombre">
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="#">tienda de celulares</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="img/cart.jpg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
 
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">limpíar carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">ir a
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-        <label for="isurname">Apellido</label>
-        <input type="text" name="" id="Apellido">
-        <label for="isurname">precio</label>
-        <input type="text" name="" id="precio">
-        <select id="destino">
-            <option value="750">argentina</option>
-            <option value="1200">chile</option>
-            <option value="2000">paraguay</option>
-        </select>
-        <input type="submit" value="enviar">
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Lista de celulares</h1>
+            <p class="lead">Selecciona equipo movil</p>
+        </div>
 
-<p id="nombreP">Bienvenido </p>
-<p id="montop">Su monto a pagar sin impuestos </p>
-<p id="impuestosp">Monto con impuestos </p>
-<p id="enviop">precio del envio </p>
-<p id="totalp">Total</p>
+        <div class="container" id="lista-productos">
+            
+        </div>
+    </main>
 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
 
 </body>
-<script src="./js/main.js"></script>
 
 </html>

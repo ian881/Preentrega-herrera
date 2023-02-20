@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"marca": "iphone 14",
+		"imagen": "img/iphone14.jpg",
+		"precio": "5000",
+		"detalles": ["8 GB RAM", "COLOR VIOLETA", "256 GB DISCO SSD"]
+	},
+	{
+		"id": 2,
+		"marca": "motorola",
+		"imagen": "img/moto.jpg",
+		"precio": "3000",
+		"detalles": ["16 GB RAM", "COLOR AZUL", "64TB DD"]
+	},
+	{
+		"id": 3,
+		"marca": "iphone8",
+		"imagen": "img/iphone8.jpg",
+		"precio": "4000",
+		"detalles": ["4 GB RAM", "COLOR BLANCO", "128TB DD"]
+	},
+	{
+		"id": 4,
+		"marca": "s22",
+		"imagen": "img/s22.jpg",
+		"precio": "5900",
+		"detalles": ["8 GB RAM", "COLOR VERDE", "128 GB DD"]
+	},
+	{
+		"id": 5,
+		"marca": "s20",
+		"imagen": "img/s20.jpg",
+		"precio": "5769",
+		"detalles": ["8 GB RAM", "COLOR NEGRO", "256 GB DD"]
+	}
+]
